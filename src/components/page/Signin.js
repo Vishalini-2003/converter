@@ -1,17 +1,12 @@
-import React from 'react'
-import { useState } from 'react';
-
-import './App.css';
+import React,{useState} from 'react'
+import './Signin.css';
 var Name="";
-function Signin() {
-
-    const [email, setEmail] = useState("");
+function Signin(){
+  const [email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
-    const [info, setInfo] = useState('user1');
     function update(){
-        setInfo(email);
-        Name=info;
-        console.log(info)
+        console.log(email)
+        Name=email
     }
     return (
         <div className="box1">
@@ -28,7 +23,6 @@ function Signin() {
         
     )
 }
-export {Name}
+
 export default Signin
-
-
+export {Name}

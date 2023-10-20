@@ -1,11 +1,11 @@
+import { Route, Routes } from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import About from './components/page/About';
+import Contact from './components/page/Contact';
+import Home from './components/page/Home';
+import Signin from './components/page/Signin';
+import { useRef,useEffect } from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from './HomePage';
-import React, { useEffect, useRef, useState, useContext, createContext } from 'react'
-import Signin from './Signin';
-import { Name } from './Signin';
-
 
 function App() {
   const canvasRef = useRef(null);
@@ -102,50 +102,22 @@ function App() {
     }
 
 
-  },[]);
-  const [user, setUser] = useState(null);
-  const handleLogin = () => {
-    console.log(Name)
-    // Replace with the actual user's name
-    setUser(Name);
-
-  }
-  const UserContext = createContext()
-
+  }, []);
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/home' element={< HomePage />}></Route>
-          <Route path='/Signin' element={< Signin />}></Route>
-        </Routes>
-      </BrowserRouter>
-      <div className='App'>
-        <nav>
-          <a href="#"><h1>Contextor</h1></a>
+    <div className="App">
+      
+      <Navbar />    
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
+    <canvas ref={canvasRef}>
 
-          <ul className="list">
-
-            <BrowserRouter>
-              <li><Link to='/Sign'>About</Link></li>
-              <li><Link to='/'>Projects</Link></li>
-              <li>{user ? (
-                //<span>{user}</span>
-                <UserContext.Provider value={user}>
-                  <h1 style={{color:'white'}}>{`Hello ${user}!`}</h1>
-                </UserContext.Provider>
-              ) : (
-                <Link to='/Signin' onClick={handleLogin}>Login</Link>
-              )}</li>
-            </BrowserRouter>
-          </ul>
-        </nav>
-
-
-      </div>
-      <canvas ref={canvasRef}>
-
-      </canvas>
+    </canvas>
     </>
   );
 }
