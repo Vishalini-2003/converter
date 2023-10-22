@@ -40,19 +40,19 @@ img{
   width: 50%;
   position: fixed;
   z-index: 1;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   padding-top: 20px;
 }
 /* Control the left side */
 .left {
   left: 0;
-  background: rgb(69, 211, 192);
+  background: rgb(255, 255, 255);
 }
 
 /* Control the right side */
 .right {
   right: 0;
-  background: rgb(69, 211, 192);
+  background: rgb(255, 255, 255);
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -74,7 +74,7 @@ img{
   width: 25px;
   height: 25px;
   border: 7px solid rgba(255, 255, 255, 0.3);
-  border-left: 7px solid #fff;
+  border-left: 7px solid #000000;
   border-radius: 50%;
   animation: spin 1s ease infinite;
 }

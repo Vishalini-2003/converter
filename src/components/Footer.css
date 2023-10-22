@@ -1,4 +1,4 @@
-body {
+/*body {
     margin: 0;
     background: linear-gradient(#0d0d0d, #212121);
     font-family: "Euclid Circular A", "Poppins";
@@ -8,10 +8,9 @@ body {
   html,
   body {
     height: 100%;
-  }
+  }*/
   
   .background {
-    position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
@@ -59,17 +58,17 @@ body {
   footer {
     position: fixed;
     left: 0;
-    bottom: 12px;
+    bottom: 1px;
     display: flex;
     width: 100%;
-    height: 370px;
+    height: 300px;
   }
   
   section {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 30px;
+    justify-content: end; 
+    gap: 20px;
     padding-bottom: 80px;
     padding-left: 60px;
     width: 100%;

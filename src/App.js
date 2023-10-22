@@ -24,7 +24,7 @@ function App() {
     }
     const params = {
       pointsNumber: 40,
-      widthFactor: .3,
+      widthFactor: .1,
       mouseThreshold: .6,
       spring: .4,
       friction: .5
@@ -93,7 +93,7 @@ function App() {
         ctx.stroke();
       }
       ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
-      ctx.strokeStyle = '#00fffc';
+      ctx.strokeStyle = '#000000';
       window.requestAnimationFrame(update);
     }
 
@@ -111,7 +111,7 @@ function App() {
       
       <Navbar />    
       </div>
-      <div>
+      <div className='App'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

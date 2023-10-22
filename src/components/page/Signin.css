@@ -1,6 +1,4 @@
-body{
-    background-color: rgb(159, 150, 180);
-}
+
   .login {
     color: #0f172a;
     text-align: center;
@@ -45,7 +43,7 @@ body{
     color: #333;
   }
   button {
-    background-color: #71eeff; /* Green */
+    background-color: #1d4ed8; 
     border: none;
     color: rgb(11, 10, 10);
     padding: 15px 30px;
