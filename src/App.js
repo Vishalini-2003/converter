@@ -4,6 +4,7 @@ import About from './components/page/About';
 import Contact from './components/page/Contact';
 import Home from './components/page/Home';
 import Signin from './components/page/Signin';
+import Convert from './Convert';
 import { useRef,useEffect } from 'react';
 import './App.css';
 
@@ -105,14 +106,17 @@ function App() {
   }, []);
   return (
     <>
-    <div className="App">
+    <div>
       
       <Navbar />    
+      </div>
+      <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/convert" element={<Convert />}/>
       </Routes>
     </div>
     <canvas ref={canvasRef}>

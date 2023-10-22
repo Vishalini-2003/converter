@@ -43,17 +43,8 @@ function Navbar(){
         <li>
           <NavLink to="/contact">Contact</NavLink>
         </li>
-        {/*<li>{
-              User ? (
-                <NavLink to="/">{`${User}!`}</NavLink>
-              ):(<NavLink to="/signin">Signin</NavLink>)
-          }
-        </li>
         <li>
-          <NavLink to="signin">Signin</NavLink>
-        </li>*/}
-        <li>
-          {Name?(<NavLink to="/">{data}</NavLink>):(<NavLink to="signin">Signin</NavLink>)}
+          {Name?(<NavLink to="/convert">{Name}</NavLink>):(<NavLink to="signin">Signin</NavLink>)}
         </li>
       </ul>
     </nav>
