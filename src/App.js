@@ -4,7 +4,7 @@ import About from './components/page/About';
 import Contact from './components/page/Contact';
 import Home from './components/page/Home';
 import Signin from './components/page/Signin';
-import Footer from './components/Footer';
+//import Footer from './components/Footer';
 import Convert from './Convert';
 import { useRef,useEffect } from 'react';
 import './App.css';
@@ -120,7 +120,6 @@ function App() {
         <Route path="/convert" element={<Convert />}/>
       </Routes>
 
-      <Footer/>
     </div>
     <canvas ref={canvasRef}>
 
