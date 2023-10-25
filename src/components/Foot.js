@@ -4,25 +4,8 @@ import './Foot.css'
 function Foot() {
   return (
     <>
-          <meta charSet="UTF-8" />
-  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Footer - Sagar Developer</title>
-  <link
-    rel="stylesheet"
-    href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-  />
-  <link
-    href="http://fonts.googleapis.com/css?family=Cookie"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link rel="stylesheet" href="style.css" />
-  <header>
-    <h2>
-      Responsive <span>Footer</span>{" "}
-    </h2>
-  </header>
+          
+  
   <footer className="footer-distributed">
     <div className="footer-left">
       <h3>
@@ -51,16 +34,14 @@ function Foot() {
       <div>
         <i className="fa fa-envelope" />
         <p>
-          <a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a>
+          <a href="mailto:dharun.qwerty@gmail.com">xyz@gmail.com</a>
         </p>
       </div>
     </div>
     <div className="footer-right">
       <p className="footer-company-about">
         <span>About the company</span>
-        <strong>Sagar Developer</strong> is a Youtube channel where you can find
-        more creative CSS Animations and Effects along with HTML, JavaScript and
-        Projects using C/C++.
+        <strong>LINDR converter</strong> is a website where you can convert scanned images into readable text.
       </p>
       <div className="footer-icons">
         <a href="#">
