@@ -4,7 +4,10 @@ import About from './components/page/About';
 import Contact from './components/page/Contact';
 import Home from './components/page/Home';
 import Signin from './components/page/Signin';
+<<<<<<< HEAD
 import Foot from './components/Foot';
+=======
+>>>>>>> 1c6f61d48b9f6d98eef3a942f811747abb07932d
 //import Footer from './components/Footer';
 import Convert from './Convert';
 import { useRef,useEffect } from 'react';
@@ -121,7 +124,10 @@ function App() {
         <Route path="/convert" element={<Convert />}/>
       </Routes>
 
+<<<<<<< HEAD
       <Foot/>
+=======
+>>>>>>> 1c6f61d48b9f6d98eef3a942f811747abb07932d
     </div>
     <canvas ref={canvasRef}>
 
