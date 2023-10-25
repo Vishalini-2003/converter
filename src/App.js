@@ -7,7 +7,7 @@ import Signin from './components/page/Signin';
 import Foot from './components/Foot';
 //import Footer from './components/Footer';
 import Convert from './Convert';
-import { useRef,useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -108,24 +108,24 @@ function App() {
   }, []);
   return (
     <>
-    <div>
-      
-      <Navbar />    
+      <div>
+
+        <Navbar />
       </div>
       <div className='App'>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/convert" element={<Convert />}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/convert" element={<Convert />} />
+        </Routes>
 
-      <Foot/>
-    </div>
-    <canvas ref={canvasRef}>
+        <Foot />
+      </div>
+      <canvas ref={canvasRef}>
 
-    </canvas>
+      </canvas>
     </>
   );
 }

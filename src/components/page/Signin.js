@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import './Signin.css';
 import {auth} from "./FirebaseConfig"
+
 import { signInWithEmailAndPassword,createUserWithEmailAndPassword} from 'firebase/auth';
 //import { useNavigate } from 'react-router-dom';
 //const navigate = useNavigate();
@@ -9,6 +10,7 @@ var Name="";
 function Signin(){
   const [email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
+
     function handleSubmit (event) {
         console.log(email)
         Name=email
@@ -22,7 +24,8 @@ function Signin(){
             alert(error);
           });
       };
-        const handlecreateSubmit = async (e) => {
+
+      const handlecreateSubmit = async (e) => {
         console.log(email)
         Name=email
         e.preventDefault();
@@ -35,6 +38,7 @@ function Signin(){
           alert(error);
         }
       };
+
     return (
         <div className="box1">
             <h1 className="login">Login</h1>
@@ -46,10 +50,7 @@ function Signin(){
             <br />
             <button onClick={handleSubmit} >submit</button>
             <button onClick={handlecreateSubmit} >Create Account</button>
-        </div>
-
-
-        
+        </div>        
     )
 }
 

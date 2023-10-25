@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createWorker } from 'tesseract.js';
-
+import { storage } from './components/page/FirebaseConfig';
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import './Convert.css'
 
 function Convert() {
@@ -8,11 +9,36 @@ function Convert() {
   const [imageUrl, setImageUrl] = useState(null);
   const [stringValue, setStringValue] = useState(' ');
 
+  var imageRef="";
+
   function ImgPrev() {
     if (selectedFile) {
-      setImageUrl(URL.createObjectURL(selectedFile));
+      //setImageUrl(URL.createObjectURL(selectedFile));
+      imageRef = ref(storage, `images/${selectedFile.name}`);
+      uploadBytes(imageRef, selectedFile)
+      .then((snapshot) => {
+        alert("Image uploaded Successfully");
+        getDownloadURL(snapshot.ref).then(() => {
+          setImageUrl(URL.createObjectURL(selectedFile));
+        })
+      })
     }
   }
+
+  /*const uploadImage = () => {
+    if (imageUpload == null)
+      return;
+    imageRef = ref(storage, `images/${imageUpload.name}`);
+    uploadBytes(imageRef, imageUpload).then((snapshot) => {
+      alert("Image uploaded Successfully");
+      getDownloadURL(snapshot.ref).then((url) => {
+        //setImageUrl(url);
+
+
+      });
+    });
+  };*/
+
   const GetText = async () => {
     setStringValue('');
     const worker = await createWorker({
@@ -29,8 +55,8 @@ function Convert() {
     <div>
       <div className="split left">
         <div className="centered">
-          {imageUrl?(""):(<input type="file" onChange={e => setSelectedFile(e.target.files[0])} />)}
-          {imageUrl?(<img src={imageUrl} alt="Image Preview" height="90%" width="100%"></img>):("")}
+          {imageUrl ? ("") : (<input type="file" onChange={e => setSelectedFile(e.target.files[0])} />)}
+          {imageUrl ? (<img src={imageUrl} alt="Image Preview" height="90%" width="100%"></img>) : ("")}
           <button className="button-64" onClick={ImgPrev}>preview</button>
           {/*imageUrl?(<img src={imageUrl} alt="Image Preview" height="90%" width="100%"></img>):("")*/}
           {/*<button className="button-63" onClick={onFileUpload}>Upload</button>*/}
@@ -43,7 +69,6 @@ function Convert() {
             stringValue === "" ?
               <div className="loader align-self-center" ></div>
               :
-
               <div className='textbox'>{stringValue}</div>
           }
           <button className="button-64" onClick={GetText}>text</button>
