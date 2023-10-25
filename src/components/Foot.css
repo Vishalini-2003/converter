@@ -30,13 +30,13 @@ header span {
 /* The footer is fixed to the bottom of the page */
 
 footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
 }
 
 @media (max-height:800px) {
     footer {
-        position: static;
+        position: sticky;
     }
     header {
         padding-top: 40px;
@@ -45,6 +45,7 @@ footer {
 
 .footer-distributed {
     background-color: #2d2a30;
+    bottom:0;
     box-sizing: border-box;
     width: 100%;
     text-align: left;

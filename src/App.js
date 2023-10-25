@@ -121,11 +121,13 @@ function App() {
           <Route path="/convert" element={<Convert />} />
         </Routes>
 
-        <Foot />
+        
       </div>
+      
       <canvas ref={canvasRef}>
 
       </canvas>
+      <Foot />
     </>
   );
 }
