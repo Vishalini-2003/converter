@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB6cGrcyGrg2pw8reryPDF1DSgH5JQLxmU",
-  authDomain: "converter-lindr.firebaseapp.com",
-  projectId: "converter-lindr",
-  storageBucket: "converter-lindr.appspot.com",
-  messagingSenderId: "1003859239713",
-  appId: "1:1003859239713:web:7a12d4f79921b73bd85460"
+  apiKey: "AIzaSyCbnmhQBl34FZ0BupI3eChMP_JShONBoNk",
+  authDomain: "textractor-lindr.firebaseapp.com",
+  projectId: "textractor-lindr",
+  storageBucket: "textractor-lindr.appspot.com",
+  messagingSenderId: "851658570149",
+  appId: "1:851658570149:web:33380f95bc8755c390d04c"
 };
 
 // Initialize Firebase
